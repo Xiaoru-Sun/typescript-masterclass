@@ -1,4 +1,8 @@
-const firstName = 'mario'
-const age = 30
+const firstName = "mario";
+const age = 30;
 
-console.log(firstName, age)
+let height = 145;
+
+console.log(firstName, age);
+
+// const user = {};
