@@ -1,13 +1,17 @@
-"use strict";
-//-----------
-// functions
-//-----------
-function addTwoNumbers(a, b) {
-    return a + b;
+
+function addAllNumbers(items) {
+    const total = items.reduce((a, c) => a + c, 0);
+    console.log(total);
+    // return total;
 }
-const subtractTwoNumbers = (a, b) => {
-    return a - b;
+addAllNumbers([1, 2, 4, 5]);
+// return type inference //
+const formatGreeting = (name, greeting) => {
+    return `${greeting} ${name}`;
 };
+const result = formatGreeting("marios", "hello");
+console.log(result);
+=======
 // addTwoNumbers('2', 5)
 addTwoNumbers(3, 9);
 subtractTwoNumbers(10, 7);
@@ -24,3 +28,4 @@ function formatGreeting(name, greeting) {
 }
 // we get inference on return types, but not on argument types
 // type inference on return values does not enforce a return type
+
