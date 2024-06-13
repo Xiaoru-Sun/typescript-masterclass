@@ -25,16 +25,15 @@ const [lat, long] = useCoords();
 const arsenal = ["Man city", true];
 const city = ["Man united", true];
 const hotspur = ["Livepool", true];
-//meaning it expects two or more tuples of type Matches followed by a string
 function processMatches(...matches) {
     const lastMatch = matches.pop();
-    console.log("previous matches:");
+    console.log("previous matches");
     for (const match of matches) {
         console.log(match[0]);
     }
-    console.log("last match:", lastMatch);
+    console.log("last match", lastMatch);
 }
-processMatches(arsenal, city, hotspur, "Chelsea vs. Arsenal");
+
 //--------------
 // named tuples
 //--------------
