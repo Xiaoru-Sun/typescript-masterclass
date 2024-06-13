@@ -1,24 +1,29 @@
-/* functions */
-function addNumbers(a: number, b: number): number {
-  return a + b;
+//------
+//any type
+//------
+
+let age: any;
+age = 30;
+age = true;
+
+let title;
+title = 25;
+title = "title";
+
+//------
+//any type in arrays
+//------
+
+let things: any = ["hello", 5, null];
+things.push({ id: 123 });
+//------
+//functions & any
+//------
+function addTogether(value: any): any {
+  return value + value;
 }
+const resultOne = addTogether("hello");
+const resultTwo = addTogether(3);
 
-const subtractTwoNumbers = (a: number, b: number): number => {
-  return a - b;
-};
-
-function addAllNumbers(items: number[]): void {
-  const total = items.reduce((a, c) => a + c, 0);
-  console.log(total);
-  // return total;
-}
-addAllNumbers([1, 2, 4, 5]);
-
-// return type inference //
-
-const formatGreeting = (name: string, greeting: string): string => {
-  return `${greeting} ${name}`;
-};
-
-const result = formatGreeting("marios", "hello");
-console.log(result);
+//useful when migrating from js to ts
+// because using any won't cause errors initially
