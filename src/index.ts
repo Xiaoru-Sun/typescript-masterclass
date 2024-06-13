@@ -8,7 +8,7 @@ age = true;
 
 let title;
 title = 25;
-title = "title";
+title = { title: "hello" };
 
 //------
 //any type in arrays
